@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meri Website</title>
+
+    <style>
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        form button {
+            background: #667eea;
+            color: white;
+            cursor: pointer;
+        }
+
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-top: 20px;
+            object-fit: cover;
+        }
+
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; color: #222; }
+        nav { background: #222; padding: 15px; text-align: center; position: sticky; top: 0; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; font-size: 16px; }
+        .hero {
+            min-height: 80vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+        .hero h1 { font-size: 38px; margin-bottom: 10px; }
+        .hero p { font-size: 19px; }
+        button {
+            margin-top: 20px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #667eea;
+            font-size: 17px;
+            cursor: pointer;
+        }
+        section { padding: 50px 25px; text-align: center; }
+        #about { background: white; }
+        #contact { background: #eeeeee; }
+        footer { background: #222; color: white; text-align: center; padding: 20px; }
+
+        .social {
+            margin-top: 20px;
+        }
+
+        .social a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 15px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .social a:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero" id="home">
+        <h1>My Website 🚀</h1>
+        <p>Welcome to my website!</p>
+
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+        </div>
+
+        <img src="https://picsum.photos/250" alt="My Website Image">
+        <button onclick="showMessage()">Click Me</button>
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my website. I am learning web development step by step.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form onsubmit="sendMessage(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer><p>© 2026 Meri Website</p></footer>
+
+    <script>
+        function showMessage() {
+            alert("Thank you for visiting my website! ❤️");
+        }
+        function sendMessage(event) {
+            event.preventDefault();
+            alert("Your message has been sent! ❤️");
+        }
+    </script>
+
+</body>
+</html>
